@@ -10,17 +10,17 @@ class Demo{
 }
 class MyThreadA extends Thread{
     public void run(){
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 200; i++){
             System.out.println("Program A : "+i);
-            try{Thread.sleep(500);}catch(InterruptedException ex){}
+            //try{Thread.sleep(500);}catch(InterruptedException ex){}
         }
     }
 }
 class MyThreadB extends Thread{
     public void run(){
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 200; i++){
             System.out.println("Program B : "+i);
-            try{Thread.sleep(500);}catch(InterruptedException ex){}
+            //try{Thread.sleep(500);}catch(InterruptedException ex){}
         }
     }
 }
