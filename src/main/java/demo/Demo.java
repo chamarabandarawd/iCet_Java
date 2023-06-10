@@ -1,19 +1,22 @@
 import java.util.*;
 class Demo{
     public static void main(String args[]){
-        MyThread t1=new MyThread();
-        t1.start();
+        Thread t1=new MyThreadA();
+        Thread t2=new MyThreadB();
 
+        t1.start();
+        t2.start();
+    }
+}
+class MyThreadA extends Thread{
+    public void run(){
         for (int i = 0; i < 10; i++){
             System.out.println("Program A : "+i);
             try{Thread.sleep(500);}catch(InterruptedException ex){}
         }
-        System.out.println("---------------");
-
-
     }
 }
-class MyThread extends Thread{
+class MyThreadB extends Thread{
     public void run(){
         for (int i = 0; i < 10; i++){
             System.out.println("Program B : "+i);
