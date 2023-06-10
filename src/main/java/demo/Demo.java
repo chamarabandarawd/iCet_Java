@@ -1,15 +1,22 @@
 package demo;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Demo {
+    class Customer {
+        private int code;
+        private String name;
 
-    public static void main(String[] args) {
-        ArrayList <String>strList=new ArrayList<>();
-        strList.add("A");
-        strList.add("B");
-        strList.add("C");
-        strList.add("D");
-        System.out.println(strList); //strList.toString()
+        public Customer(int code, String name) {
+            this.code = code;
+            this.name = name;
+        }
+    }
+
+
+        public static void main(String[] args) {
+            LinkedList<Customer> custQue = new LinkedList<>();
+            custQue.addLast(new Customer(1001,"Danapala"));
     }
 }
